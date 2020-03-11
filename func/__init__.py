@@ -29,7 +29,7 @@ def main(mytimer: func.TimerRequest) -> None:
             requests.request("PUT", svc, headers=headers)
             pass
         
-        logging.info("Timer job is done. Waiting for the next execution time")
+        logging.info("{} services updated their cache database".format(len(update_list)))
         pass
     except Exception as ex:
         error_log = '{} -> {}'
